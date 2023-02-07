@@ -10,13 +10,13 @@ export default function LatestCode({ repositories }) {
     <section className="bg-[#f4f3ee] -mt-40 dark:bg-[#0D1F22] pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:pt-40 mx-10">
-          <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-brown-300 my-20 md:my-30 md:text-[#0D1F22] dark:text-gray-600 text-center lg:text-left">
+          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-brown-300 my-20 md:my-30 md:text-[#0D1F22] dark:text-[#f4f3ee] text-center lg:text-left">
             Latest Code
           </h1>
 
           <a
             href={`https://github.com/${userData.githubUsername}`}
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#f43ee]"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#D7D3C1] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#0D1F22]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,15 +52,15 @@ export default function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
   return (
     <div className="github-repo">
-      <h1 className="font-semibold text-xl dark:text-gray-200 text-gray-700">
+      <h1 className="font-semibold text-xl dark:text-[#DFDDCD] text-[#483A32]">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-4 text-gray-500">
+      <p className="text-base font-normal my-4 text-[#866F5B]">
         {latestRepo.description}
       </p>
       <a
         href={latestRepo.clone_url}
-        className="font-semibold group flex flex-row space-x-2 w-full items-center"
+        className="font-semibold group flex flex-row space-x-2 w-full items-center dark: text-[#483A32]"
       >
         <p>View Repository </p>
         <div className="transform  group-hover:translate-x-2 transition duration-300">

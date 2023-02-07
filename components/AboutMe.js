@@ -3,13 +3,13 @@ import userData from "@constants/data";
 
 export default function AboutMe() {
   return (
-    <section className="bg-[#EDE8E8] dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-[#EEE8E8] dark:bg-gray-800">
+    <section className="bg-[#f4f3ee] dark:bg-[#0D1F22]">
+      <div className="max-w-6xl mx-auto h-48 bg-[#f4f3ee] dark:bg-[#0D1F22]">
         <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
           About Me.
         </h1>
       </div>
-      <div className="bg-[#EDE8E8] -mt-10 dark:bg-gray-900">
+      <div className="bg-[#f4f3ee] -mt-10 dark:bg-[#0D1F22]">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
             className="leading-loose text-2xl md:text-4xl font-semibold  mx-4"
@@ -17,7 +17,7 @@ export default function AboutMe() {
           >
             {userData.about.title}. Currently working on{" "}
             <a
-              className="bg-deep-purple-100 rounded-md px-2 py-1 text-white"
+              className="bg-deep-purple-100 rounded-md px-2 py-1 text-[#517B57]"
               href={userData.about.currentProjectUrl}
             >
               {userData.about.currentProject} ✈️
@@ -25,23 +25,23 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="bg-[#EDE8E8] dark:bg-gray-900 px-4">
+      <div className="bg-[#f4f3ee] dark:bg-[#0D1F22] px-4">
         <div className="pt-20 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
           {/* Social Buttons */}
           <div className="inline-flex flex-col">
             <div>
               <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Contact
+                Contact Me!
               </h1>
               <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                For any sort help / enquiry, shoot a{" "}
+                For any sort help / enquiry, shoot me a{" "}
                 <a
                   href={`mailto:${userData.email}`}
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                 >
-                  mail
+                 e-mail
                 </a>{" "}
-                and I'll get back. I swear.
+                and I'll get back as soon as possible!
               </p>
             </div>
             <div className="mt-8">
@@ -56,7 +56,7 @@ export default function AboutMe() {
                   target="__blank"
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                 >
-                  CV
+                  CV/Resume
                 </a>{" "}
                 and I'd love to work for you.
               </p>

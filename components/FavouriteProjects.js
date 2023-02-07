@@ -6,12 +6,12 @@ export default function FavouriteProjects() {
     <div className="bg-[#f4f3ee] -mt-40 dark:bg-[#0D1F22]">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
-          <h1 className="text-5xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-20 md:text-[#0D1F22] dark:text-[#f4f3ee] text-center ">
+          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-10 md:text-[#0D1F22] dark:text-[#f4f3ee] text-center-left ">
             Favorite Projects
           </h1>
           <Link
             href="/projects" 
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#f43ee]"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#D7D3C1] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#0D1F22]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,8 +36,9 @@ export default function FavouriteProjects() {
         <div className="grid md:grid-cols-3 gap-10 space-y-[20px] lg:-mt-100 pb-40  ">
           {/* Single card */}
           <a
-            href="https://tailwindmasterkit.com"
-            className="w-full block col-span-3 shadow-2xl "
+            href="https://github.com/csaragon1941/MusicBot"
+            className="w-full block col-span-3 sm:col-span-1  object-cover"
+            
           >
             <div className="relative overflow-hidden">
               <img
@@ -45,10 +46,10 @@ export default function FavouriteProjects() {
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out "
               />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-[#517B57] rounded-md px-2">
+              <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-lg bg-[#517B57] rounded-md px-2">
                 Discord Music Bot
               </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+              <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
                 01
               </h1>
             </div>
@@ -56,7 +57,7 @@ export default function FavouriteProjects() {
           {/* Single card */}
           <a
             href="https://placeholdertech.in"
-            className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
+            className="w-full block col-span-3 sm:col-span-1  object-cover"
           >
             <div className="relative overflow-hidden">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
@@ -65,10 +66,10 @@ export default function FavouriteProjects() {
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
+              <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-xl bg-[#517B57] rounded-md px-2">
                 PlaceholderTech
               </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+              <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
                 02
               </h1>
             </div>
@@ -81,14 +82,14 @@ export default function FavouriteProjects() {
             <div className="relative overflow-hidden shadow-2xl">
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/portfolio.png"
+                src="/portimg.png"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
               />
-              <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
+              <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-xl bg-[#517B57] rounded-md px-2">
                 Portfolio
               </h1>
-              <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+              <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
                 03
               </h1>
             </div>

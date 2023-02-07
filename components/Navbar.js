@@ -19,10 +19,10 @@ export default function Navbar() {
       <div className="flex  md:flex-row justify-between items-center">
         <div className="flex flex-col">
           <Link href="/">
-            <h1 className="font-semibold text-xl dark:text-gray-100">
+            <h1 className="font-semibold text-xl text-[#3C312A] dark:text-[#FFFCF2]">
               {userData.name}
             </h1>
-            <p className="text-base font-light text-gray-500 dark:text-gray-300">
+            <p className="text-base font-light text-[#3C312A] dark:text-[#FFFCF2]">
               {userData.designation}
             </p>
           </Link>
@@ -33,8 +33,8 @@ export default function Navbar() {
             href="/about"
             className={`text-base  ${
               router.asPath === "/about"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
+                ? "text-[#3C312A] font-bold dark:text-[#FFFCF2]"
+                : "text-[#3C312A] dark:text-[#FFFCF2] font-normal "
             }`}
           >
             About{" "}
@@ -58,8 +58,8 @@ export default function Navbar() {
             href="/projects"
             className={`text-base  ${
               router.asPath === "/projects"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
+                ? "text-gray-800 font-bold dark:text-[#FFFCF2]"
+                : "text-gray-600 dark:text-[#FFFCF2] font-normal "
             }`}
           >
             Projects
@@ -83,8 +83,8 @@ export default function Navbar() {
             href="/experience"
             className={`text-base  ${
               router.asPath === "/experience"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
+                ? "text-[#3C312A] font-bold dark:text-[#FFFCF2]"
+                : "text-gray-600 dark:text-[#FFFCF2] font-normal "
             }`}
           >
             Experience{" "}
@@ -108,8 +108,8 @@ export default function Navbar() {
             href="/contact"
             className={`text-base  ${
               router.asPath === "/contact"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
+                ? "text-[#3C312A] font-bold dark:text-[#FFFCF2]"
+                : "text-[#3C312A] dark:text-[#FFFCF2] font-normal "
             }`}
           >
             Contact
@@ -146,7 +146,7 @@ export default function Navbar() {
           </a>
           <a
             href={userData.socialLinks.twitter}
-            className="text-base font-normal text-gray-600 dark:text-gray-300"
+            className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +161,7 @@ export default function Navbar() {
           </a>
           <a
             href={userData.socialLinks.linkedin}
-            className="text-base font-normal text-gray-600 dark:text-gray-300"
+            className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -211,25 +211,25 @@ export default function Navbar() {
       <div className="space-x-8 block md:hidden mt-4">
         <Link
           href="/about"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
         >
           About
         </Link>
         <Link
           href="/projects"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
         >
           Projects
         </Link>
         <Link
           href="/experience"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
         >
           Experience
         </Link>
         <Link
           href="/contact"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
+          className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
         >
           Contact
         </Link>
