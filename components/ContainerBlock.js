@@ -10,7 +10,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const meta = {
     title: "Christina Aragon - Developer, Writer, Creator and YouTuber",
     description: `I'm a hard working and determined individual willing to get any job done. Get in touch with me to know more!`,
-    image: "/avatar.png",
+    image: "/C.Aragon-Avatar.png",
     type: "website",
     ...customMeta,
   };

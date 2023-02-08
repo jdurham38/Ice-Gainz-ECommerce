@@ -5,19 +5,19 @@ export default function AboutMe() {
   return (
     <section className="bg-[#f4f3ee] dark:bg-[#0D1F22]">
       <div className="max-w-6xl mx-auto h-48 bg-[#f4f3ee] dark:bg-[#0D1F22]">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+        <h1 className=" text-5xl md:text-8xl font-bold py-20 text-center md:text-left">
           About Me.
         </h1>
       </div>
       <div className="bg-[#f4f3ee] -mt-10 dark:bg-[#0D1F22]">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
-            className="leading-loose text-2xl md:text-4xl font-semibold  mx-4"
+            className="leading-loose text-2xl md:text-3xl font-semibold  mx-4"
             style={{ lineHeight: "3rem" }}
           >
             {userData.about.title}. Currently working on{" "}
             <a
-              className="bg-deep-purple-100 rounded-md px-2 py-1 text-[#517B57]"
+              className="bg-[#517B57] dark:bg-[#FFFCF2] rounded-md px-2 py-1 text-[#517B57] dark:text-[#517B57]"
               href={userData.about.currentProjectUrl}
             >
               {userData.about.currentProject} ✈️
@@ -139,7 +139,7 @@ export default function AboutMe() {
               </p>
             ))}
 
-            <h1 className="bg-red-500 text-3xl rounded-md px-2 py-1 inline-block font-bold text-gray-50">
+            <h1 className="bg-[#517B57] dark:bg-[#FFFCF2] text-3xl rounded-md px-2 py-1 inline-block font-bold text-[#517B57] dark:text-[#6B9E73]">
               Tech Stack
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
