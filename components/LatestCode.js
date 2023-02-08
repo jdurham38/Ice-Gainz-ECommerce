@@ -7,7 +7,7 @@ export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState(repositories);
 
   return (
-    <section className="bg-[#f4f3ee] -mt-40 dark:bg-[#0D1F22] pb-40">
+    <section className="bg-[#f4f3ee] -mt-40 dark:bg-[#24252E] pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:pt-40 mx-10">
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-brown-300 my-20 md:my-30 md:text-[#0D1F22] dark:text-[#f4f3ee] text-center lg:text-left">
@@ -16,7 +16,7 @@ export default function LatestCode({ repositories }) {
 
           <a
             href={`https://github.com/${userData.githubUsername}`}
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#D7D3C1] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#0D1F22]"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#E7EAEE] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#55453A]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +52,10 @@ export default function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
   return (
     <div className="github-repo">
-      <h1 className="font-semibold text-xl  text-[#483A32] dark:text-[#DFDDCD] ">
+      <h1 className="font-semibold text-xl  text-[#483A32] dark:text-[#FFFAEB] ">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-4 text-[#483A32] dark:text-[#517B57]">
+      <p className="text-base font-normal my-4 text-[#483A32] dark:text-[#BFBB9B]">
         {latestRepo.description}
       </p>
       <a

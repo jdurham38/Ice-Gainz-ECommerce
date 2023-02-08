@@ -3,7 +3,7 @@ import userData from "@constants/data";
 
 export default function Footer() {
   return (
-    <div className="bg-[#f4f3ee] dark:bg-[#0D1F22]">
+    <div className="bg-[#f4f3ee] dark:bg-[#24252E]">
       <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
         <div className="h-0.5 w-full bg-[#CCC0B8] dark:bg-[#f4f3ee]"></div>
         <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">

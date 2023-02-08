@@ -3,13 +3,13 @@ import userData from "@constants/data";
 
 export default function AboutMe() {
   return (
-    <section className="bg-[#f4f3ee] dark:bg-[#0D1F22]">
-      <div className="max-w-6xl mx-auto h-48 bg-[#f4f3ee] dark:bg-[#0D1F22]">
+    <section className="bg-[#f4f3ee] dark:bg-[#24252E]">
+      <div className="max-w-6xl mx-auto h-48 bg-[#f4f3ee] dark:bg-[#24252E]">
         <h1 className=" text-5xl md:text-8xl font-bold py-20 text-center md:text-left">
           About Me.
         </h1>
       </div>
-      <div className="bg-[#f4f3ee] -mt-10 dark:bg-[#0D1F22]">
+      <div className="bg-[#f4f3ee] -mt-10 dark:bg-[#24252E]">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
             className="leading-loose text-2xl md:text-3xl font-semibold  mx-4"
@@ -17,7 +17,7 @@ export default function AboutMe() {
           >
             {userData.about.title}. Currently working on{" "}
             <a
-              className="bg-[#517B57] dark:bg-[#FFFCF2] rounded-md px-2 py-1 text-[#517B57] dark:text-[#517B57]"
+              className="bg-[#517B57] dark:bg-[#F3F5F7] rounded-md px-2 py-1 text-[#517B57] dark:text-[#6C5B4B]"
               href={userData.about.currentProjectUrl}
             >
               {userData.about.currentProject} ✈️
@@ -25,7 +25,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="bg-[#f4f3ee] dark:bg-[#0D1F22] px-4">
+      <div className="bg-[#f4f3ee] dark:bg-[#24252E] px-4">
         <div className="pt-20 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
           {/* Social Buttons */}
           <div className="inline-flex flex-col">

@@ -4,31 +4,32 @@ import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
 
 export default function Hero() {
-  const colors = ["#9AC4F8", "#F4D06F", "#FFC6D9", "#99EDCC"];
+  const colors = ["#73AB84", "#99D19C", "#79C7C5", "#98DADE"];
+  const darkcolors=["#73AB84", "#99D19C", "#79C7C5", "#ADE1E5" ]
   
   return (
-    <div className="flex flex-row justify-center items-start overflow-hidden">
+    <div className="flex flex-row space-y-[10px] justify-center items-start overflow-hidden">
       {/* Text container */}
 
-      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
+      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20 grid md:grid-cols-1 gap-12 space-y-[20px] lg:-mt-100 pb-40 ">
         <RoughNotationGroup show={true}>
           <RainbowHighlight color={colors[0]}>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-700 dark:text-gray-200 my-2">
+            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-[#FFFCF2] my-2">
               Developer.
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[1]}>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-700 dark:text-gray-200 my-2">
+            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-[#FFFCF2] my-2">
               Designer.
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[2]}>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-700 dark:text-gray-200 my-2">
+            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-[#FFFCF2] my-2">
               Programmer.
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[3]}>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-700 dark:text-gray-200 my-2">
+            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-[#FFFCF2] my-2 ">
               Business Owner.
             </h1>
           </RainbowHighlight>
