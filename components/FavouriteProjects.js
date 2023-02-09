@@ -6,12 +6,12 @@ export default function FavouriteProjects() {
     <div className="bg-[#f4f3ee] -mt-40 dark:bg-[#24252E]">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
-          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-10 md:text-[#0D1F22] dark:text-[#E7EAEE] text-center-left ">
+          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-10 md:text-[#221E1B] dark:text-[#E7EAEE] text-center-left ">
             Favorite Projects
           </h1>
           <Link
             href="/projects" 
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] dark:bg-[#D7D3C1] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#0D1F22]"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] hover:bg-[#625041] dark:bg-[#003D29] dark:hover:bg-[#006642] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#E3DACA]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
