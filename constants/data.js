@@ -14,12 +14,12 @@ const userData = {
     },
     {
       title: "App for Undiclosed Internship",
-      link: "https://placeholdertech.in",
+      link: "",
       imgUrl: "/placeholdertech.png",
     },
     {
       title: "Portfolio",
-      link: "https://manuarora.in",
+      link: "",
       imgUrl: "/portfolio.png",
     },
     {

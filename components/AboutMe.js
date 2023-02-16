@@ -3,13 +3,13 @@ import userData from "@constants/data";
 
 export default function AboutMe() {
   return (
-    <section className="bg-[#f4f3ee] dark:bg-[#24252E]">
-      <div className="max-w-6xl mx-auto h-48 bg-[#f4f3ee] dark:bg-[#24252E]">
+    <section className="bg-[#f4f3ee] dark:bg-[#1F1F1F]">
+      <div className="max-w-6xl mx-auto h-48 bg-[#f4f3ee] dark:bg-[#1F1F1F]">
         <h1 className=" text-5xl md:text-8xl font-bold py-20 text-center md:text-left">
           About Me.
         </h1>
       </div>
-      <div className="bg-[#f4f3ee] -mt-10 dark:bg-[#24252E]">
+      <div className="bg-[#f4f3ee] -mt-10 dark:bg-[#1F1F1F]">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
             className="leading-loose text-2xl md:text-3xl font-semibold  mx-4"
@@ -17,7 +17,7 @@ export default function AboutMe() {
           >
             {userData.about.title}. Currently working on{" "}
             <a
-              className="bg-[#517B57] dark:bg-[#F3F5F7] rounded-md px-2 py-1 text-[#517B57] dark:text-[#6C5B4B]"
+              className="bg-[#517B57] dark:bg-[#F3F5F7] rounded-md px-2 py-1 text-[#F4F3EE] dark:text-[#6C5B4B]"
               href={userData.about.currentProjectUrl}
             >
               {userData.about.currentProject} ✈️
@@ -25,7 +25,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="bg-[#f4f3ee] dark:bg-[#24252E] px-4">
+      <div className="bg-[#f4f3ee] dark:bg-[#1F1F1F] px-4">
         <div className="pt-20 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
           {/* Social Buttons */}
           <div className="inline-flex flex-col">
@@ -139,16 +139,12 @@ export default function AboutMe() {
               </p>
             ))}
 
-            <h1 className="bg-[#517B57] dark:bg-[#FFFCF2] text-3xl rounded-md px-2 py-1 inline-block font-bold text-[#517B57] dark:text-[#6B9E73]">
+            <h1 className="bg-[#517B57] dark:bg-[#F3F7F3] text-3xl rounded-md px-2 py-1 inline-block font-bold text-[#517B57] dark:text-[#483A33]">
               Tech Stack
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
               <img
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png"
                 className="h-20 w-20 mx-4 my-4"
               />
               <img
@@ -164,33 +160,12 @@ export default function AboutMe() {
                 className="h-20 w-20 mx-4 my-4"
               />
               <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
                 className="h-20 w-20 mx-4 my-4"
               />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
+
+
+
             </div>
           </div>
         </div>
