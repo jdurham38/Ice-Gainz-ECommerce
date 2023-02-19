@@ -3,14 +3,14 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <section className="bg-[#EEE8E8]} dark:bg-[#24252E]">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-[#24252E]">
+    <section className="bg-[#EEE8E8]} dark:bg-[#1F1F1F]">
+      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-[#1F1F1F]">
         <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
           Experience
         </h1>
       </div>
-      <div className="bg-[#EEE8E8] dark:bg-gray-900 -mt-4">
-        <div className="grid grid-cols-1 dark:bg-gray-900 max-w-xl mx-auto pt-20">
+      <div className="bg-[#EEE8E8] dark:bg-[#1F1F1F] -mt-4">
+        <div className="grid grid-cols-1 dark:bg-[#1F1F1F] max-w-xl mx-auto pt-20">
           {/* Experience card */}
           {userData.experience.map((exp, idx) => (
             <>
@@ -27,7 +27,7 @@ export default function Experience() {
                   <div className="w-4 h-4 bg-green-500 rounded-full relative z-10">
                     <div className="w-4 h-4 bg-green-500 rounded-full relative z-10 animate-ping"></div>
                   </div>
-                  <div className="w-1 h-24 bg-gray-200 dark:bg-gray-500 rounded-full -mt-2"></div>
+                  <div className="w-1 h-24 bg-gray-200 dark:bg-[#474747] rounded-full -mt-2"></div>
                 </div>
               )}
             </>
@@ -40,15 +40,15 @@ export default function Experience() {
 
 const ExperienceCard = ({ title, desc, year, company, companyLink }) => {
   return (
-    <div className="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-gray-800 z-10 mx-4">
-      <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-gray-800">
+    <div className="relative experience-card border p-4 rounded-md shadow-xl bg-white dark:bg-[#3D3D3D] z-10 mx-4">
+      <h1 className="absolute -top-10 md:-left-10 md:-top-10 text-4xl text-gray-200 font-bold dark:text-[gray-300]">
         {year}
       </h1>
       <h1 className="font-semibold text-xl">{title}</h1>
-      <a href={companyLink} className="text-gray-500">
+      <a href={companyLink} className="text-gray-400">
         {company}
       </a>
-      <p className="text-gray-600 dark:text-gray-400 my-2">{desc}</p>
+      <p className="text-gray-600 dark:text-gray-300 my-2">{desc}</p>
     </div>
   );
 };

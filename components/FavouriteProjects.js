@@ -11,7 +11,7 @@ export default function FavouriteProjects() {
           </h1>
           <Link
             href="/projects" 
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] hover:bg-[#625041] dark:bg-[#003D29] dark:hover:bg-[#006642] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#E3DACA]"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] hover:bg-[#625041] dark:bg-[#57B25C] dark:hover:bg-[#408C44] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#F3F7F3]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
