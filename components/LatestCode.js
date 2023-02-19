@@ -7,16 +7,16 @@ export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState(repositories);
 
   return (
-    <section className="bg-[#f4f3ee] -mt-40 dark:bg-[#24252E] pb-40">
+    <section className="bg-[#f4f3ee] -mt-40 dark:bg-[#1F1F1F] pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:pt-40 mx-10">
-          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-brown-300 my-20 md:my-30 md:text-[#221E1B] dark:text-[#f4f3ee] text-center lg:text-left">
+          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-brown-300 my-20 md:my-30 md:text-[#221E1B] dark:text-[#FFFFFF] text-center lg:text-left">
             Latest Code
           </h1>
 
           <a
             href={`https://github.com/${userData.githubUsername}`}
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] hover:bg-[#625041] dark:bg-[#E7EAEE] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#55453A]"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] hover:bg-[#625041] dark:bg-[#00CCC2] dark:hover:bg-[#007A74] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#F3F7F3]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,15 +52,15 @@ export default function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
   return (
     <div className="github-repo">
-      <h1 className="font-semibold text-xl  text-[#483A33] dark:text-[#FFFAEB] ">
+      <h1 className="font-semibold text-xl  text-[#483A33] dark:text-[#00CCC2] ">
         {latestRepo.name}
       </h1>
-      <p className="text-base font-normal my-4 text-[#927563] dark:text-[#BFBB9B]">
+      <p className="text-base font-normal my-4 text-[#927563] dark:text-[#EBFFFE]">
         {latestRepo.description}
       </p>
       <a
         href={latestRepo.clone_url}
-        className="font-semibold group flex flex-row space-x-2 w-full items-center text-[#483A33] dark:text-[#90B696]"
+        className="font-semibold group flex flex-row space-x-2 w-full items-center text-[#483A33] dark:text-[#C2FFFC]"
       >
         <p>View Repository </p>
         <div className="transform  group-hover:translate-x-2 transition duration-300">

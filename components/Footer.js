@@ -3,7 +3,7 @@ import userData from "@constants/data";
 
 export default function Footer() {
   return (
-    <div className="bg-[#f4f3ee] dark:bg-[#24252E]">
+    <div className="bg-[#f4f3ee] dark:bg-[#1F1F1F]">
       <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
         <div className="h-0.5 w-full bg-[#CCC0B8] dark:bg-[#f4f3ee]"></div>
         <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
@@ -17,7 +17,7 @@ export default function Footer() {
               <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
                 <a
                   className="hover:bg-red-500 rounded-md px-2 py-1  hover:text-gray-50"
-                  href="https://manuarora.in"
+                  href=""
                 >
                   
                 </a>
