@@ -25,6 +25,7 @@ The website is built in my favourite Tech Stack and deployed on [Vercel](https:/
 
 - Clone the repository using `git clone https://github.com/csaragon1941/My-Digital-Portfolio`
 - Install all the modules by using `npm i` or `npm install` or `yarn`
+- install all dependencies including npx react, npx tailwindcss init, either yarn or npm, styled-components, react-slick, slick-carousel
 - Run the local development server by using `npm run dev` or `yarn dev`
 - Make the required edits and deploy to YOUR GitHub repo for CI/CD.
 
