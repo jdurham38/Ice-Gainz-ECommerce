@@ -1,6 +1,34 @@
 import React from "react";
 import Link from "next/link";
 
+// Reusable component for a card with a GitHub link
+const GitHubCard = ({ href, imageSrc, title, index }) => {
+  return (
+    <a href={href} className="github-card w-full sm:w-80 h-96 object-cover md:mx-2">
+      <div className="relative h-full overflow-hidden flex flex-col justify-center items-center">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="transform hover:scale-125 transition duration-2000 ease-out"
+        />
+        <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-lg bg-[#517B57] rounded-md px-2">
+          {title}
+        </h1>
+        <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
+          {index.toString().padStart(2, "0")}
+        </h1>
+      </div>
+      <style jsx>{`
+        .github-card img {
+          height: 70%;
+          max-height: 300px;
+        }
+      `}</style>
+    </a>
+  );
+};
+
+
 export default function FavouriteProjects() {
   return (
     <div className="bg-[#f4f3ee] -mt-40 dark:bg-[#1F1F1F]">
@@ -9,92 +37,47 @@ export default function FavouriteProjects() {
           <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-10 md:text-[#221E1B] dark:text-[#FFFFFF] text-center-left ">
             Favorite Projects
           </h1>
-          <Link
-            href="/projects" 
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-[#483A33] hover:bg-[#625041] dark:bg-[#57B25C] dark:hover:bg-[#408C44] shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center md:text-[#F4F3EE] dark:text-[#F3F7F3]"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-arrow-up-right-square"
-              stroke="4"
-              strokeWidth="4"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
-              />
-            </svg>
-            <p>View all</p>
-          </Link>
         </header>
 
         {/* Grid starts here */}
-        <div className="grid md:grid-cols-3 gap-10 space-y-[20px] lg:-mt-100 pb-40  ">
-          {/* Single card */}
-          <a
-            href="https://github.com/csaragon1941/MusicBot"
-            className="w-full block col-span-3 sm:col-span-1  object-cover"
-            
-          >
-            <div className="relative overflow-hidden">
-              <img
-                src="/DcBot.png"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out "
-              />
-              <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-lg bg-[#517B57] rounded-md px-2">
-                Discord Music Bot
-              </h1>
-              <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
-                01
-              </h1>
-            </div>
-          </a>
-          {/* Single card */}
-          <a
-            href="https://placeholdertech.in"
-            className="w-full block col-span-3 sm:col-span-1  object-cover"
-          >
-            <div className="relative overflow-hidden">
-              {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-              <img
-                src="/dcbot.png"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out"
-              />
-              <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-xl bg-[#517B57] rounded-md px-2">
-                PlaceholderTech
-              </h1>
-              <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
-                02
-              </h1>
-            </div>
-          </a>
-          {/* Single card */}
-          <a
-            href="https://manuarora.in"
-            className="w-full block col-span-3 sm:col-span-1  object-cover"
-          >
-            <div className="relative overflow-hidden shadow-2xl">
-              {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
-              <img
-                src="/portimg.png"
-                alt="portfolio"
-                className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
-              />
-              <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-xl bg-[#517B57] rounded-md px-2">
-                Portfolio
-              </h1>
-              <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
-                03
-              </h1>
-            </div>
-          </a>
+        <div className="flex flex-wrap justify-center gap-10 md:justify-start lg:-mt-100 pb-40">
+          {/* GitHub cards */}
+          <GitHubCard
+            href="https://github.com/jdurham38/discord-bot"
+            imageSrc="/DcBot.png"
+            title="Discord Music Bot"
+            index={1}
+            className="w-full sm:w-80 h-96 object-cover md:mx-2"
+          />
+          <GitHubCard
+            href="https://github.com/jdurham38/Java-Bug-Tracker"
+            imageSrc="/dcbot.png"
+            title="Java Bug Tracking Management System"
+            index={2}
+            className="w-full sm:w-80 h-96 object-cover md:mx-2"
+          />
+          <GitHubCard
+            href="https://github.com/jdurham38/Dabloon-Token/"
+            imageSrc="/portimg.png"
+            title="Dabloon Token"
+            index={3}
+            className="w-full sm:w-80 h-96 object-cover md:mx-2"
+          />
         </div>
+        {/* Grid ends here */}
+
+        {/* Call to Action starts here */}
+        <div className="flex flex-col justify-center items-center py-20 text-center bg-[#f4f3ee] dark:bg-[#1F1F1F]">
+          <h1 className="text-3xl font-bold text-gray-500 dark:text-white mb-4">
+            Want to see more of my projects?
+          </h1>
+          <Link href="https://github.com/jdurham38?tab=repositories" passHref={true} legacyBehavior={true}>
+            <a className="bg-[#517B57] text-white font-bold py-2 px-4 rounded-md hover:bg-opacity-80 transition duration-300">
+              View All Projects
+            </a>
+          </Link>
+        </div>
+        {/* Call to Action ends here */}
       </div>
     </div>
   );

@@ -139,7 +139,7 @@ export default function AboutMe() {
               </p>
             ))}
 
-            <h1 className="bg-[#517B57] dark:bg-[#F3F7F3] text-3xl rounded-md px-2 py-1 inline-block font-bold text-[#517B57] dark:text-[#483A33]">
+            <h1 className="bg-[#517B57] dark:bg-[#F3F7F3] text-3xl rounded-md px-2 py-1 inline-block font-bold text-[#FFFFFF] dark:text-[#483A33]">
               Tech Stack
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
@@ -163,6 +163,46 @@ export default function AboutMe() {
                 src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
                 className="h-20 w-20 mx-4 my-4"
               />
+
+              <img
+              src="https://tse1.mm.bing.net/th?id=OIP.ADqbtRNCtoGE-1bvvoSQdgHaE8&pid=Api&P=0"
+              className="h-20 w-30 mx-4 my-4"
+              />
+              <img
+                src="https://tse2.mm.bing.net/th?id=OIP.Uilr4jt8dw8tPN6lxISq1wHaGu&pid=Api&P=0"
+                className="h-20 w-20 mx-4 my-4"
+              />
+              <img
+                src="https://tse2.mm.bing.net/th?id=OIP.zfG8FW1Z61TDDwJjGR2T-AHaIU&pid=Api&P=0"
+                className="h-20 w-20 mx-4 my-4"
+              />
+           
+
+<img
+                src="https://tse2.mm.bing.net/th?id=OIP.Ue2JZ0sSt-1MEZJNdi9IfwHaIi&pid=Api&P=0
+                "
+                className="h-20 w-20 mx-4 my-4"
+              />
+              <img
+                src="https://tse1.mm.bing.net/th?id=OIP.RBEEEh9FaW1dsFVobvP28wHaHa&pid=Api&P=0"
+                className="h-20 w-20 mx-4 my-4"
+              />
+              <img
+                src="https://tse3.mm.bing.net/th?id=OIP.v2Yc6P3hpLB6o22BYOCftAAAAA&pid=Api&P=0"
+                className="h-20 w-20 mx-4 my-4"
+              />
+
+<img
+                src="https://tse2.mm.bing.net/th?id=OIP.yepaGaLfhC__XZi9oPDZagAAAA&pid=Api&P=0
+                "
+                className="h-20 w-20 mx-4 my-4"
+              />
+              <img
+                src="https://tse3.mm.bing.net/th?id=OIP.b45WH7HHExZq88GsFxtNDAHaF7&pid=Api&P=0"
+                className="h-20 w-20 mx-4 my-4"
+              />
+             
+
 
 
 

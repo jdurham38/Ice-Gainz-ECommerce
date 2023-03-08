@@ -1,11 +1,11 @@
 import React from "react";
 import ContainerBlock from "../components/ContainerBlock";
-import Projects from "../components/Projects";
+import News from "../components/News";
 
 export default function projects() {
   return (
-    <ContainerBlock title="Projects - Christina Aragon">
-      <Projects />
+    <ContainerBlock title="News - Joshua Durham">
+      <News />
     </ContainerBlock>
   );
 }

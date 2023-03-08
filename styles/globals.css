@@ -19,3 +19,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.github-card {
+  width: 320px;
+  height: 320px;
+}
+

@@ -63,7 +63,7 @@ const NewsItem = styled.li`
 const NewsLink = styled.a`
   font-size: 1.2em;
   font-weight: bold;
-  color: #0070c0;
+  color: black;
   text-decoration: none;
   transition: color 0.2s;
 `;
@@ -123,7 +123,7 @@ function useFetch(url) {
   return { data, error };
 }
 
-export default function Projects() {
+export default function News() {
   const [items, setItems] = useState([]);
   const [themeMode, setThemeMode] = useState("light");
   const { data, error } = useFetch(
@@ -153,7 +153,12 @@ export default function Projects() {
 
   return (
     <NewsContainer>
-      <NewsTitle>Recent News in Tech!</NewsTitle>
+      <div className="max-w-6xl mx-auto h-48 bg-[#F4F3EE] dark:bg-[#1F1F1F]">
+        <h1 className=" text-6xl md:text-20xl font-bold py-3 text-center dark-[#1F1F1F] md:text-left flex justify-center items-center">
+        <NewsTitle>Recent News in Tech!</NewsTitle>
+        </h1>
+      </div>
+    
       <NewsList>
         {error && <p>{error}</p>}
         {!data ? (

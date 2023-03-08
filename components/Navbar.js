@@ -55,15 +55,15 @@ export default function Navbar() {
             )}
           </Link>
           <Link
-            href="/projects"
+            href="/news"
             className={`text-base  ${
-              router.asPath === "/projects"
+              router.asPath === "/news"
                 ? "text-gray-800 font-bold dark:text-[#FFFCF2]"
                 : "text-gray-600 dark:text-[#FFFCF2] font-normal "
             }`}
           >
-            Projects
-            {router.asPath === "/projects" && (
+            News
+            {router.asPath === "/news" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -216,10 +216,10 @@ export default function Navbar() {
           About
         </Link>
         <Link
-          href="/projects"
+          href="/news"
           className="text-base font-normal text-[#3C312A] dark:text-[#FFFCF2]"
         >
-          Projects
+          News
         </Link>
         <Link
           href="/experience"

@@ -7,6 +7,22 @@
   align-items: center;
 }
 
+.rainbow-strobe {
+  border: 4px solid;
+  border-image: linear-gradient(to right, #FF3F4E, #FF6B3B, #FF9933, #FFCC33, #C0D42C, #009245, #0098DC, #8B27CC);
+  border-image-slice: 1;
+  animation: rainbow-strobe 2s linear infinite;
+}
+
+@keyframes rainbow-strobe {
+  0% { border-image: linear-gradient(to right, #FF3F4E, #FF6B3B, #FF9933, #FFCC33, #C0D42C, #009245, #0098DC, #8B27CC); }
+  50% { border-image: linear-gradient(to right, #ff00ff, #ff1493, #ff8c00, #ffff00, #00ff00, #00ffff, #1e90ff, #8B27CC); }
+  100% { border-image: linear-gradient(to right, #FF3F4E, #FF6B3B, #FF9933, #FFCC33, #C0D42C, #009245, #0098DC, #8B27CC); }
+}
+
+
+
+
 .main {
   padding: 5rem 0;
   flex: 1;
