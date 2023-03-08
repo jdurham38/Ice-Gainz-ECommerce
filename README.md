@@ -29,6 +29,12 @@ The website is built in my favourite Tech Stack and deployed on [Vercel](https:/
 - Run the local development server by using `npm run dev` or `yarn dev`
 - Make the required edits and deploy to YOUR GitHub repo for CI/CD.
 
+
+# Git Push Steps
+- git add .
+- git commit -m "message goes here"
+- git push portfolio main
+
 # Deployment
 
 Deployment can be done in 3 easy steps.
