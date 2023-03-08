@@ -11,10 +11,10 @@ const GitHubCard = ({ href, imageSrc, title, index }) => {
           alt={title}
           className="transform hover:scale-125 transition duration-2000 ease-out"
         />
-        <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-lg bg-[#517B57] rounded-md px-2">
+        <h1 className="absolute top-5 left-4 text-gray-50 font-bold text-lg bg-[#000000] justify-center items-center rounded-md px-2">
           {title}
         </h1>
-        <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl">
+        <h1 className="absolute bottom-5 left-5 text-gray-50 font-bold text-xl justify-center items-center">
           {index.toString().padStart(2, "0")}
         </h1>
       </div>
