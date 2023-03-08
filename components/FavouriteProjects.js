@@ -51,14 +51,14 @@ export default function FavouriteProjects() {
           />
           <GitHubCard
             href="https://github.com/jdurham38/Java-Bug-Tracker"
-            imageSrc="/dcbot.png"
+            imageSrc="/bugtracker.png"
             title="Java Bug Tracking Management System"
             index={2}
             className="w-full sm:w-80 h-96 object-cover md:mx-2"
           />
           <GitHubCard
             href="https://github.com/jdurham38/Dabloon-Token/"
-            imageSrc="/portimg.png"
+            imageSrc="/dabloontoken.png"
             title="Dabloon Token"
             index={3}
             className="w-full sm:w-80 h-96 object-cover md:mx-2"
