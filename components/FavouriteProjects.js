@@ -34,35 +34,12 @@ export default function FavouriteProjects() {
     <div className="bg-[#f4f3ee] -mt-40 dark:bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
-          <h1 className="text-6xl lg:text-7xl max-w-lg font-bold text-gray-500 my-20 md:my-10 md:text-[#221E1B] dark:text-[#FFFFFF] text-center-left ">
-            Favorite Projects
-          </h1>
+          
         </header>
 
         {/* Grid starts here */}
         <div className="flex flex-wrap justify-center gap-10 md:justify-start lg:-mt-100 pb-40">
-          {/* GitHub cards */}
-          <GitHubCard
-            href="https://github.com/jdurham38/discord-bot"
-            imageSrc="/DcBot.png"
-            title="Discord Music Bot"
-            index={1}
-            className="w-full sm:w-80 h-96 object-cover md:mx-2"
-          />
-          <GitHubCard
-            href="https://github.com/jdurham38/Java-Bug-Tracker"
-            imageSrc="/bugtracker.png"
-            title="Java Bug Tracking Management System"
-            index={2}
-            className="w-full sm:w-80 h-96 object-cover md:mx-2"
-          />
-          <GitHubCard
-            href="https://github.com/jdurham38/Dabloon-Token/"
-            imageSrc="/dabloontoken.png"
-            title="Dabloon Token"
-            index={3}
-            className="w-full sm:w-80 h-96 object-cover md:mx-2"
-          />
+          
         </div>
         {/* Grid ends here */}
 
