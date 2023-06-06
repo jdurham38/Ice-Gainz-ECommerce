@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "@constants/data";
+import CatAnimation from "./CatAnimation";
+
 
 
 
@@ -21,6 +23,7 @@ export default function Navbar() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
+      <CatAnimation />
       <div className="flex md:flex-row justify-between items-center">
         <div className="flex flex-col">
           <Link href="/">
@@ -60,125 +63,171 @@ export default function Navbar() {
             )}
           </Link>
 
-          {/* Blog */}
+
+
+
+          {/* About */}
           <Link
             href="/blog"
             className={`text-base  ${router.asPath === "/blog"
-              ? "text-gray-800 font-bold dark:text-[#FFFCF2]"
+              ? "text-[#3C312A] font-bold dark:text-[#FFFCF2]"
               : "text-[#3C312A] dark:text-[#FFFCF2] font-normal "
               }`}
           >
             Blog
+            {router.asPath === "/blog" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-down inline-block h-3 w-3"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                />
+              </svg>
+            )}
           </Link>
 
-       {/* Experience Dropdown */}
-<div className="relative inline-block">
-  <h1>
-    <button
-      onMouseEnter={() => setShowExperienceDropdown(true)}
-      onMouseLeave={() => {
-        const timeoutId = setTimeout(() => setShowExperienceDropdown(false), 200);
-        setShowExperienceDropdownTimeout(timeoutId);
-      }}
-      className="text-base text-[#3C312A] dark:text-[#FFFCF2] font-normal outline-none transition-colors duration-200 hover:text-[#0070F3] dark:hover:text-[#0070F3] focus:text-[#0070F3] focus:outline-none"
-    >
-      Experience
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        className="bi bi-arrow-down inline-block h-3 w-3"
-        viewBox="0 0 16 16"
-      >
-        <path
-          fillRule="evenodd"
-          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-        />
-      </svg>
-    </button>
-    {showExperienceDropdown && (
-      <div
-        onMouseEnter={() => {
-          clearTimeout(showExperienceDropdownTimeout);
-          setShowExperienceDropdown(true);
-        }}
-        onMouseLeave={() => setShowExperienceDropdown(false)}
-        className="absolute z-10 mt-2 space-y-2 p-2 bg-white dark:bg-[#0D1117] shadow-md rounded-md right-[-30px]"
-      >
-        {/* Dropdown options */}
-        <Link href="/experience" passHref>
-          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
-            Experience
-          </span>
-        </Link>
+          {/* Experience Dropdown */}
+          <div className="relative inline-block">
+            <h1>
+              <button
+                onMouseEnter={() => setShowExperienceDropdown(true)}
+                onMouseLeave={() => {
+                  const timeoutId = setTimeout(() => setShowExperienceDropdown(false), 200);
+                  setShowExperienceDropdownTimeout(timeoutId);
+                }}
+                className="text-base text-[#3C312A] dark:text-[#FFFCF2] font-normal outline-none transition-colors duration-200 hover:text-[#0070F3] dark:hover:text-[#0070F3] focus:text-[#0070F3] focus:outline-none"
+              >
+                Experience
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-arrow-down inline-block h-3 w-3"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                  />
+                </svg>
+              </button>
+              {showExperienceDropdown && (
+                <div
+                  onMouseEnter={() => {
+                    clearTimeout(showExperienceDropdownTimeout);
+                    setShowExperienceDropdown(true);
+                  }}
+                  onMouseLeave={() => setShowExperienceDropdown(false)}
+                  className="absolute z-10 mt-2 space-y-2 p-2 bg-white dark:bg-[#0D1117] shadow-md rounded-md right-[-30px]"
+                >
+                  {/* Dropdown options */}
+                  <Link href="/experience" passHref>
+                    
+                    <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                      Experience
+                    </span>
+                  </Link>
 
-        {/* Nested Projects Dropdown */}
-        <div className="relative inline-block">
-          <button
-            onMouseEnter={() => setShowProjectsDropdown(true)}
-            onMouseLeave={() => {
-              const timeoutId = setTimeout(() => setShowProjectsDropdown(false), 200);
-              setShowProjectsDropdownTimeout(timeoutId);
-            }}
-            className="text-base text-[#3C312A] dark:text-[#FFFCF2] font-normal outline-none transition-colors duration-200 hover:text-[#0070F3] dark:hover:text-[#0070F3] focus:text-[#0070F3] focus:outline-none"
+                  {/* Nested Projects Dropdown */}
+                  <div className="relative inline-block">
+                    <button
+                      onMouseEnter={() => setShowProjectsDropdown(true)}
+                      onMouseLeave={() => {
+                        const timeoutId = setTimeout(() => setShowProjectsDropdown(false), 200);
+                        setShowProjectsDropdownTimeout(timeoutId);
+                      }}
+                      className="text-base text-[#3C312A] dark:text-[#FFFCF2] font-normal outline-none transition-colors duration-200 hover:text-[#0070F3] dark:hover:text-[#0070F3] focus:text-[#0070F3] focus:outline-none"
+                    >
+                      <Link href="/projects" passHref>
+                        <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                          Projects
+                        </span>
+                      </Link>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className="bi bi-arrow-down inline-block h-3 w-3"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                        />
+                      </svg>
+                    </button>
+                    {showProjectsDropdown && (
+                      <div
+                        onMouseEnter={() => {
+                          clearTimeout(showProjectsDropdownTimeout);
+                          setShowProjectsDropdown(true);
+                        }}
+                        onMouseLeave={() => setShowProjectsDropdown(false)}
+                        className="absolute z-10 mt-[-50px] space-y-2 p-2 bg-white dark:bg-[#0D1117] shadow-md rounded-md right-[-175px]"
+                      >
+                        <Link href="/projects#project1" passHref>
+                          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                            EBO
+                          </span>
+                        </Link>
+                        <Link href="/projects#project2" passHref>
+                          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                            Mars Rover
+                          </span>
+                        </Link>
+                        <Link href="/projects#project3" passHref>
+                          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                            Dabloon Token
+                          </span>
+                        </Link>
+                        <Link href="/projects#project4" passHref>
+                          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                            Discord Bot
+                          </span>
+                        </Link>
+                        {/* Add more project links as needed */}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </h1>
+          </div>
+
+
+          {/* Game */}
+          <Link
+            href="/game"
+            className={`text-base  ${router.asPath === "/game"
+              ? "text-[#3C312A] font-bold dark:text-[#FFFCF2]"
+              : "text-[#3C312A] dark:text-[#FFFCF2] font-normal "
+              }`}
           >
-            <Link href="/projects" passHref>
-              <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
-                Projects
-              </span>
-            </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-arrow-down inline-block h-3 w-3"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fillRule="evenodd"
-                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-              />
-            </svg>
-          </button>
-          {showProjectsDropdown && (
-            <div
-              onMouseEnter={() => {
-                clearTimeout(showProjectsDropdownTimeout);
-                setShowProjectsDropdown(true);
-              }}
-              onMouseLeave={() => setShowProjectsDropdown(false)}
-              className="absolute z-10 mt-[-50px] space-y-2 p-2 bg-white dark:bg-[#0D1117] shadow-md rounded-md right-[-175px]"
-            >
-              <Link href="/projects#project1" passHref>
-                <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
-                  EBO
-                </span>
-              </Link>
-              <Link href="/projects#project2" passHref>
-                <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
-                  Mars Rover
-                </span>
-              </Link>
-              <Link href="/projects#project3" passHref>
-                <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
-                  Dabloon Token
-                </span>
-              </Link>
-              <Link href="/projects#project4" passHref>
-                <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
-                  Discord Bot
-                </span>
-              </Link>
-              {/* Add more project links as needed */}
-            </div>
-          )}
-        </div>
-      </div>
-    )}
-  </h1>
-</div>
+            Game
+            {router.asPath === "/game" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-down inline-block h-3 w-3"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                />
+              </svg>
+            )}
+          </Link>
 
 
           {/* Contact */}

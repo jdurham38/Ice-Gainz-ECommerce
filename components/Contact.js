@@ -1,7 +1,54 @@
 import React from "react";
 import userData from "@constants/data";
+import emailjs from "emailjs-com";
+
+
+
+
 
 export default function Contact() {
+
+  const send = (e) => {
+    e.preventDefault();
+
+    // Send user's message
+    emailjs
+      .send(
+        "service_0xwkh51",
+        "template_lscrldk",
+        {
+          name: e.target.name.value,
+          email: e.target.email.value,
+          message: e.target.message.value,
+        },
+        "9u3bvylFqjIva-sQx"
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        e.target.reset();
+
+        // Send auto-reply
+        emailjs
+          .send(
+            "service_0xwkh51",
+            "template_auto_reply",
+            {
+              name: e.target.name.value,
+              email: e.target.email.value,
+            },
+            "9u3bvylFqjIva-sQx"
+          )
+          .then((response) => {
+            console.log("Auto-reply sent!", response.status, response.text);
+          })
+          .catch((error) => {
+            console.log("Failed to send auto-reply...", error);
+          });
+      })
+      .catch((error) => {
+        console.log("Failed to send message...", error);
+      });
+  };
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-[#F4F3EE] dark:bg-[#0D1F22] antialiased">
@@ -27,7 +74,7 @@ export default function Contact() {
                   width="16"
                   height="16"
                   fill="#EFEDE7"
-                  className="bi bi-telephone-fill h-4 w-4 text-white-100" 
+                  className="bi bi-telephone-fill h-4 w-4 text-white-100"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -141,7 +188,10 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-[#F4F3EE] p-4 flex flex-col">
+          <form className="form rounded-lg bg-[#F4F3EE] p-4 flex flex-col" onSubmit={send}>
+
+
+
             <label htmlFor="name" className="text-sm font-semibold text-[#1F1F1F] mx-4">
               {" "}
               Your Name
@@ -159,23 +209,23 @@ export default function Contact() {
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-[#B3AEA8]"
               name="email"
             />
-            <label
-              htmlFor="message"
-              className="text-sm font-semibold text-[#1F1F1F] mx-4 mt-4"
-            >
+
+            <label htmlFor="message" className="text-sm font-semibold text-[#1F1F1F] mx-4 mt-4">
               Message
             </label>
             <textarea
               rows="4"
-              type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-[#B3AEA8]"
               name="message"
+              placeholder="Be sure to put your email and number so I can get back to you!"
             ></textarea>
+
             <button
               type="submit"
               className="bg-[#786F68] hover:bg-[#483A33] rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold "
             >
               Send Message
+
             </button>
           </form>
         </div>

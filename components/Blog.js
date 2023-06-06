@@ -1,7 +1,79 @@
-import React from "react";
-import userData from "@constants/data";
+import React, { useState } from "react";
+
+// Define the userData array
+const userData = [
+  {
+    title: "Tile 1",
+    content: "Content for Tile 1",
+    category: "personal life",
+    date: "June 1, 2023",
+  },
+  {
+    title: "Tile 2",
+    content: "Content for Tile 2",
+    category: "tech",
+    date: "June 3, 2023",
+  },
+  {
+    title: "Tile 3",
+    content: "Content for Tile 3",
+    category: "outdoors",
+    date: "June 5, 2023",
+  },
+  // Add more blog posts with title, content, category, and date properties
+];
 
 export default function Blog() {
+  const [selectedTile, setSelectedTile] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [filteredData, setFilteredData] = useState(userData);
+
+  const handleTileClick = (tileId) => {
+    setSelectedTile(tileId === selectedTile ? null : tileId);
+  };
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+    filterData(event.target.value, selectedCategories);
+  };
+
+  const handleCategoryChange = (category) => {
+    const newSelectedCategories = selectedCategories.includes(category)
+      ? selectedCategories.filter((c) => c !== category)
+      : [...selectedCategories, category];
+    setSelectedCategories(newSelectedCategories);
+    filterData(searchTerm, newSelectedCategories);
+  };
+
+  const filterData = (searchTerm, categories) => {
+    if (categories.length === 0 && searchTerm === "") {
+      // If no categories selected and no search term entered, show all blogs
+      setFilteredData(userData);
+    } else {
+      const filteredResults = userData.filter((tile) => {
+        const lowerCaseSearchTerm = searchTerm.toLowerCase();
+        const lowerCaseCategory = tile.category.toLowerCase();
+
+        return (
+          (categories.length === 0 || categories.includes(lowerCaseCategory)) &&
+          (tile.title.toLowerCase().includes(lowerCaseSearchTerm) ||
+            tile.content.toLowerCase().includes(lowerCaseSearchTerm) ||
+            tile.date.toLowerCase().includes(lowerCaseSearchTerm))
+        );
+      });
+
+      setFilteredData(filteredResults);
+    }
+  };
+
+  const categoryColors = {
+    "personal life": "#FCE7F3",
+    tech: "#FCEAC1",
+    outdoors: "#CAF3FC",
+    // Add more category colors as needed
+  };
+
   return (
     <section className="bg-[#F4F3EE] dark:bg-[#1F1F1F]">
       <div className="max-w-6xl mx-auto h-48 bg-[#F4F3EE] dark:bg-[#1F1F1F]">
@@ -12,29 +84,69 @@ export default function Blog() {
       <div className="bg-[#F4F3EE] dark:bg-[#1F1F1F] -mt-4">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <h2 className="text-3xl font-semibold mb-4">Example Blog Post Title</h2>
-          <p className="text-lg text-gray-800 dark:text-[#FFFCF2] mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam ac metus tincidunt
-            placerat sit amet at mi. Vestibulum at consectetur sem, sit amet feugiat massa. Donec
-            interdum sapien non risus sagittis, id sagittis nunc lobortis. Nunc laoreet aliquam
-            neque, at cursus massa. Integer pretium, urna ut consectetur luctus, arcu ex tempus
-            velit, in sagittis urna ligula vitae neque. Ut vestibulum vehicula massa a rutrum. Sed
-            convallis ac dui vel viverra. Sed consequat vehicula ante vel molestie. Ut auctor justo
-            ut nunc iaculis, sit amet posuere mi sollicitudin. Vivamus a nunc eget lectus vehicula
-            tincidunt. Nam vulputate justo id enim pharetra, at commodo massa rutrum. Nam ultrices
-            felis a dui pharetra bibendum. Nam cursus mauris ut varius scelerisque. Proin euismod,
-            mi et pulvinar consequat, lorem purus luctus felis, vel dictum mauris erat et arcu.
-          </p>
-          <p className="text-lg text-gray-800 dark:text-[#FFFCF2] mb-4">
-            Nulla facilisi. Nunc volutpat commodo mauris, sit amet interdum lacus pharetra sed.
-            Fusce nec convallis dui. Donec convallis aliquam tincidunt. Nam bibendum eros nec est
-            vulputate sollicitudin. Nulla facilisi. Curabitur facilisis massa purus, eu lacinia
-            justo fermentum eget. Sed et congue sem, in tincidunt mauris. Nam semper faucibus
-            augue, at elementum nulla eleifend ut. Cras vulputate nisi in tincidunt bibendum. Sed
-            viverra ex id tellus interdum, non tincidunt ante fermentum. Mauris vel risus sed nibh
-            congue condimentum id vitae turpis. Sed facilisis orci nec justo fringilla commodo.
-            Nulla volutpat, mauris non semper varius, nunc est eleifend tellus, vitae pretium elit
-            ligula vel ligula.
-          </p>
+
+          <div className="flex items-center mb-4">
+            <label className="mr-2">
+              <input
+                type="checkbox"
+                checked={selectedCategories.includes("personal life")}
+                onChange={() => handleCategoryChange("personal life")}
+              />
+              Personal Life
+            </label>
+            <label className="mr-2">
+              <input
+                type="checkbox"
+                checked={selectedCategories.includes("tech")}
+                onChange={() => handleCategoryChange("tech")}
+              />
+              Tech
+            </label>
+            <label className="mr-2">
+              <input
+                type="checkbox"
+                checked={selectedCategories.includes("outdoors")}
+                onChange={() => handleCategoryChange("outdoors")}
+              />
+              Outdoors
+            </label>
+            {/* Add more category checkboxes */}
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {filteredData.map((tile, index) => (
+              <div
+                key={index}
+                className={`p-4 border rounded`}
+                style={{
+                  width: "300px",
+                  height: "170px",
+                  backgroundColor: categoryColors[tile.category.toLowerCase()],
+                }}
+              >
+                <div
+                  className="flex items-center justify-between cursor-pointer"
+                  onClick={() => handleTileClick(index)}
+                >
+                  <h3 className="text-lg font-semibold">{tile.title}</h3>
+                  <div className="text-sm text-gray-500">{tile.category}</div>
+                  <div className="text-xs text-gray-500">{tile.date}</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`h-5 w-5 transition-transform ${
+                      selectedTile === index ? "transform rotate-180" : ""
+                    }`}
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path fillRule="evenodd" d="M10 14l6-6H4l6 6z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                {selectedTile === index && (
+                  <div className="mt-4">{tile.content}</div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
