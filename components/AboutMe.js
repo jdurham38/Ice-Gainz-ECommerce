@@ -39,7 +39,7 @@ export default function AboutMe() {
                   href={`mailto:${userData.email}`}
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                 >
-                 e-mail
+                  e-mail
                 </a>{" "}
                 and I'll get back as soon as possible!
               </p>
@@ -61,8 +61,23 @@ export default function AboutMe() {
                 and I'd love to work for you.
               </p>
             </div>
+            <div className="mt-8" style={{ marginTop: "147px" }}>
+              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+                My Schedule
+              </h1>
+              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
+                Here's a look at my schedule on a monthly basis,
+                if you would like to
+                schedule some time to
+                chat please refer
+                to my calendar and
+                shoot me an email!
+              </p>
+            </div>
+
+
             {/* Social Links */}
-            <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200">
+            <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200" style={{ marginTop: "150px" }}>
               Social Links
             </h1>
             <div className="mt-4 ml-4">
@@ -127,7 +142,11 @@ export default function AboutMe() {
                 </a>
               </div>
             </div>
+
+
           </div>
+
+
           {/* Text area */}
           <div className="col-span-1 md:col-span-2">
             {userData.about.description?.map((desc, idx) => (
@@ -165,8 +184,8 @@ export default function AboutMe() {
               />
 
               <img
-              src="https://tse1.mm.bing.net/th?id=OIP.ADqbtRNCtoGE-1bvvoSQdgHaE8&pid=Api&P=0"
-              className="h-20 w-30 mx-4 my-4"
+                src="https://tse1.mm.bing.net/th?id=OIP.ADqbtRNCtoGE-1bvvoSQdgHaE8&pid=Api&P=0"
+                className="h-20 w-30 mx-4 my-4"
               />
               <img
                 src="https://tse2.mm.bing.net/th?id=OIP.Uilr4jt8dw8tPN6lxISq1wHaGu&pid=Api&P=0"
@@ -176,9 +195,9 @@ export default function AboutMe() {
                 src="https://tse2.mm.bing.net/th?id=OIP.zfG8FW1Z61TDDwJjGR2T-AHaIU&pid=Api&P=0"
                 className="h-20 w-20 mx-4 my-4"
               />
-           
 
-<img
+
+              <img
                 src="https://tse2.mm.bing.net/th?id=OIP.Ue2JZ0sSt-1MEZJNdi9IfwHaIi&pid=Api&P=0
                 "
                 className="h-20 w-20 mx-4 my-4"
@@ -192,7 +211,7 @@ export default function AboutMe() {
                 className="h-20 w-20 mx-4 my-4"
               />
 
-<img
+              <img
                 src="https://tse2.mm.bing.net/th?id=OIP.yepaGaLfhC__XZi9oPDZagAAAA&pid=Api&P=0
                 "
                 className="h-20 w-20 mx-4 my-4"
@@ -201,7 +220,25 @@ export default function AboutMe() {
                 src="https://tse3.mm.bing.net/th?id=OIP.b45WH7HHExZq88GsFxtNDAHaF7&pid=Api&P=0"
                 className="h-20 w-20 mx-4 my-4"
               />
-             
+
+
+              <div className="mt-8" style={{ float: "right", marginRight: "20px" }}>
+                <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+                  Monthly Schedule
+                </h1>
+                <div className="mt-4">
+                  {/* Insert the iframe code here */}
+                  <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23616161&ctz=America%2FNew_York&mode=MONTH&showTitle=1&showPrint=0&title=Josh's%20Schedule&src=amR1cmhhbTM4QGdtYWlsLmNvbQ&src=cTB2ajQ1N21xdnFpbWlnOXJkZHFhM3R0c3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%23F4511E&color=%2333B679&color=%237986CB"
+                    style={{ border: "solid 1px #777" }}
+                    width="800"
+                    height="600"
+                    frameBorder="0"
+                    scrolling="no"
+                  ></iframe>
+                </div>
+              </div>Ï
+
 
 
 
@@ -213,3 +250,5 @@ export default function AboutMe() {
     </section>
   );
 }
+
+

@@ -11,7 +11,7 @@ export default function Footer() {
             <p>&copy; Joshua Durham. All Rights Reserved.</p>
           </div>
           <div>
-            {/* Support me by keeping this in the footer, please. :) */}
+           
             <div>
               
               <div className="inline-block transform hover:scale-110 hover:-rotate-3 transition duration-300">
