@@ -193,6 +193,16 @@ export default function Navbar() {
                             Discord Bot
                           </span>
                         </Link>
+                        <Link href="/projects#project5" passHref>
+                          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                            HMS
+                          </span>
+                        </Link>
+                        <Link href="/projects#project6" passHref>
+                          <span className="block px-2 py-1 text-base font-normal text-[#3C312A] dark:text-[#FFFCF2] hover:text-[#0070F3] dark:hover:text-[#0070F3]">
+                            Mechanical Flower 
+                          </span>
+                        </Link>
                         {/* Add more project links as needed */}
                       </div>
                     )}

@@ -78,6 +78,39 @@ export default function Projects() {
                     </div>
                 </div>
 
+                {/* Project 5 */}
+                <div id="project5">
+                    <div className="bg-[#FDE68A] dark:bg-[#4B5563] rounded-lg shadow-lg p-6 w-full mx-auto mt-10">
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                            Hospital Management System (HMS)
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-300">
+                            This software was made to be able to implement common infosec practices, to better obtain a more secure software.
+                        </p>
+                        <Link href="https://github.com/jdurham38/HMS" passHref>
+                            <span className="mt-4 text-[#0070F3] dark:text-[#0070F3] font-medium hover:underline">
+                                Learn More
+                            </span>
+                        </Link>
+                    </div>
+                </div>
+                {/* Project 6 */}
+                <div id="project6">
+                    <div className="bg-[#FECACA] dark:bg-[#374151] rounded-lg shadow-lg p-6 w-full mx-auto mt-10">
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                            Mechanical Flower
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-300">
+                            This project is a gift for my girlfriend Christina, when touched the flower will expand and an LED will turn on acting as a night light.
+                        </p>
+                        <Link href="https://github.com/jdurham38/MechanicalFlower" passHref>
+                            <span className="mt-4 text-[#0070F3] dark:text-[#0070F3] font-medium hover:underline">
+                                Learn More
+                            </span>
+                        </Link>
+                    </div>
+                </div>
+
                 {/* Call to Action starts here */}
                 <div className="flex flex-col justify-center items-center py-20 text-center bg-[#f4f3ee] dark:bg-[#1F1F1F]">
                     <h1 className="text-3xl font-bold text-gray-500 dark:text-white mb-4">
