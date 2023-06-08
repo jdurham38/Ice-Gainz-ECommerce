@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const userData = [
   {
     title: "Tile 1",
-    content: "Content for Tile 1",
+    content: "test",
     category: "personal life",
     date: "June 1, 2023",
   },
@@ -85,7 +85,7 @@ export default function Blog() {
         <div className="max-w-6xl mx-auto px-4 py-8">
           <h2 className="text-3xl font-semibold mb-4">Example Blog Post Title</h2>
 
-          <div className="flex items-center mb-4">
+          <div className="flex items-center mb-4 ">
             <label className="mr-2">
               <input
                 type="checkbox"
@@ -112,7 +112,7 @@ export default function Blog() {
             </label>
             {/* Add more category checkboxes */}
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 dark:text-black">
             {filteredData.map((tile, index) => (
               <div
                 key={index}

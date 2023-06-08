@@ -16,9 +16,9 @@ export default function Projects() {
                             Economic Benefit Opportnuity "EBO"
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Description of Project 1
+                            This Android application uses NFC technology to create a contactless payment method for those using their benefits cards such as food stamps.
                         </p>
-                        <Link href="/projects/project1" passHref>
+                        <Link href="https://github.com/jdurham38/Official-Economic-Benenfit-Opportunity" passHref>
                             <span className="mt-4 text-[#0070F3] dark:text-[#0070F3] font-medium hover:underline">
                                 Learn More
                             </span>
@@ -33,9 +33,9 @@ export default function Projects() {
                             Perserverance Rover Machine Learning Algorithm
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Description of Project 2
+                            This Python algorithm uses various image processing techniques in order to better detect hazards on Mars for the various rovers.
                         </p>
-                        <Link href="/projects/project2" passHref>
+                        <Link href="https://github.com/jdurham38/Mars-Rover-ImageProcessing-MachineLearning-Algorithm" passHref>
                             <span className="mt-4 text-[#0070F3] dark:text-[#0070F3] font-medium hover:underline">
                                 Learn More
                             </span>
@@ -50,9 +50,9 @@ export default function Projects() {
                             Dabloon Crypto Token
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Description of Project 3
+                            This program uses Etherium to create a ficticious crypto currency based around a growing TikTok trend.
                         </p>
-                        <Link href="google.com" passHref>
+                        <Link href="https://github.com/jdurham38/Dabloon-Token" passHref>
                             <span className="mt-4 text-[#0070F3] dark:text-[#0070F3] font-medium hover:underline">
                                 Learn More
                             </span>
@@ -68,7 +68,7 @@ export default function Projects() {
                             Discord Music Bot
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300">
-                            Description of Project 4
+                            This software allows a user to add a discord music bot to their team so all users can listen to any music they want.
                         </p>
                         <Link href="https://github.com/jdurham38/discord-bot" passHref>
                             <span className="mt-4 text-[#0070F3] dark:text-[#0070F3] font-medium hover:underline">

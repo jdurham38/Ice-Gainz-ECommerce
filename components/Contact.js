@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-[#F4F3EE] dark:bg-[#0D1F22] antialiased">
-        <h1 className=" text-5xl md:text-9xl font-bold py-10 text-center md:text-left text-[#1F1F1F]">
+        <h1 className=" text-5xl md:text-9xl font-bold py-10 text-center md:text-center text-[#1F1F1F] dark:text-white">
           Contact
         </h1>
       </div>

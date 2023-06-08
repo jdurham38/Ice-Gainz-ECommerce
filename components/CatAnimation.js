@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+
+
+
+
+//add functionality to the cat when clicked
+//add random actions the cat does like lay down
+
+
+
 export default function CatAnimation() {
   const [position, setPosition] = useState(0);
   const [direction, setDirection] = useState(1);
