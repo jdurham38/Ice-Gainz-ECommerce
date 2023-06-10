@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 
-// Define the userData array
 const userData = [
   {
-    title: "Tile 1",
-    content: "test",
+    title: "NYC",
+    content: "My future to NYC!",
     category: "personal life",
-    date: "June 1, 2023",
+    date: "June 8, 2023",
+    link: "blog-personal-nyc", // Add the link for the blog page
   },
   {
-    title: "Tile 2",
-    content: "Content for Tile 2",
+    title: "Apple's Announcement",
+    content: "Apple's Latest Tech Announcement",
     category: "tech",
-    date: "June 3, 2023",
+    date: "June 8, 2023",
+    link: "https://example.com/apple-blog", // Add the link for the blog page
   },
   {
     title: "Tile 3",
     content: "Content for Tile 3",
     category: "outdoors",
     date: "June 5, 2023",
+    link: "https://example.com/tile3-blog", // Add the link for the blog page
   },
-  // Add more blog posts with title, content, category, and date properties
+  // Add more blog posts with title, content, category, date, and link properties
 ];
 
 export default function Blog() {
@@ -48,7 +50,6 @@ export default function Blog() {
 
   const filterData = (searchTerm, categories) => {
     if (categories.length === 0 && searchTerm === "") {
-      // If no categories selected and no search term entered, show all blogs
       setFilteredData(userData);
     } else {
       const filteredResults = userData.filter((tile) => {
@@ -71,7 +72,6 @@ export default function Blog() {
     "personal life": "#FCE7F3",
     tech: "#FCEAC1",
     outdoors: "#CAF3FC",
-    // Add more category colors as needed
   };
 
   return (
@@ -83,7 +83,7 @@ export default function Blog() {
       </div>
       <div className="bg-[#F4F3EE] dark:bg-[#1F1F1F] -mt-4">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <h2 className="text-3xl font-semibold mb-4">Example Blog Post Title</h2>
+          <h2 className="text-3xl font-semibold mb-4"></h2>
 
           <div className="flex items-center mb-4 ">
             <label className="mr-2">
@@ -110,7 +110,6 @@ export default function Blog() {
               />
               Outdoors
             </label>
-            {/* Add more category checkboxes */}
           </div>
           <div className="grid grid-cols-3 gap-4 dark:text-black">
             {filteredData.map((tile, index) => (
@@ -142,7 +141,19 @@ export default function Blog() {
                   </svg>
                 </div>
                 {selectedTile === index && (
-                  <div className="mt-4">{tile.content}</div>
+                  <>
+                    <div className="mt-4">{tile.content}</div>
+                    {tile.link && (
+                      <a
+                        href={tile.link.startsWith("http") ? tile.link : `/${tile.link}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-blue-500 underline"
+                      >
+                        Read More
+                      </a>
+                    )}
+                  </>
                 )}
               </div>
             ))}

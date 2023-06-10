@@ -1,14 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { DataStore } from '@aws-amplify/datastore';
+import { Products } from './models';
 
 
+function ProductComponent() {
+  const [product, setProduct] = useState(null);
 
-export default function Game() {
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const products = await DataStore.query(Products);
+      if (products.length > 0) {
+        setProduct(products[0]);
+      }
+    };
+
+    fetchProduct();
+  }, []);
 
   return (
     <div>
-        <h1>Under Maitenance</h1>
+      {product ? (
+        <div>
+          <h2>{product.products}</h2>
+          <p>Price: {product.price}</p>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
-    //make 2d pixel game where the map is from th eoffice and the playable characters are me christina, and sasha
-    //create all the 2d pixels office characters all with tasks to complete 
   );
 }
+
+export default ProductComponent;
