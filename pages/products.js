@@ -1,11 +1,11 @@
 import React from "react";
 import ContainerBlock from "../components/ContainerBlock";
-import Game from "../components/Game";
+import Products from "../components/Products";
 
-export default function game() {
+export default function products() {
   return (
     <ContainerBlock>
-      <Game />
+      <Products />
     </ContainerBlock>
   );
 }
