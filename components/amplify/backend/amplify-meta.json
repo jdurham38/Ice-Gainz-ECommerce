@@ -1,0 +1,99 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify7d6667825c644-staging-162603-authRole",
+      "UnauthRoleArn": "arn:aws:iam::560369542561:role/amplify-amplify7d6667825c644-staging-162603-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::560369542561:role/amplify-amplify7d6667825c644-staging-162603-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplify7d6667825c644-staging-162603-deployment",
+      "UnauthRoleName": "amplify-amplify7d6667825c644-staging-162603-unauthRole",
+      "StackName": "amplify-amplify7d6667825c644-staging-162603",
+      "StackId": "arn:aws:cloudformation:us-east-2:560369542561:stack/amplify-amplify7d6667825c644-staging-162603/7e887c20-07ab-11ee-91e9-0a76382f834d",
+      "AmplifyAppId": "d3vhqp0rd2aza4"
+    }
+  },
+  "api": {
+    "MyPortfolio": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        },
+        "GraphQLAPIIdOutput": "llbyp7stjzdx7mqiqlpmaihwei",
+        "GraphQLAPIEndpointOutput": "https://gsj22647obgclpxbo7ibf3g34a.appsync-api.us-east-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-ya3ejoj3ujclhlrt6wwobudysa"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-06-10T16:42:44.137Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify7d6667825c644-staging-162603-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiMyPortfolio"
+      }
+    },
+    "products": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "myportfolio44671da5",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify7d6667825c644-staging-162603-deployment/amplify-cfn-templates/api/products-cloudformation-template.json",
+        "logicalId": "apiproducts"
+      },
+      "lastPushTimeStamp": "2023-06-10T16:46:14.143Z",
+      "output": {
+        "ApiName": "products",
+        "RootUrl": "https://x1gyrnvt2k.execute-api.us-east-2.amazonaws.com/staging",
+        "ApiId": "x1gyrnvt2k"
+      },
+      "lastPushDirHash": "0wBlP/rP9OA0DaXVhnR6rSaW8jM="
+    }
+  },
+  "function": {
+    "myportfolio44671da5": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-06-10T16:41:05.309Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-06-10T16:41:07.923Z",
+      "distZipFilename": "myportfolio44671da5-49785633572b614f4750-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-amplify7d6667825c644-staging-162603-deployment",
+        "s3Key": "amplify-builds/myportfolio44671da5-49785633572b614f4750-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify7d6667825c644-staging-162603-deployment/amplify-cfn-templates/function/myportfolio44671da5-cloudformation-template.json",
+        "logicalId": "functionmyportfolio44671da5"
+      },
+      "lastPushTimeStamp": "2023-06-10T16:42:44.460Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::560369542561:role/myportfolioLambdaRole9e8e78d6-staging",
+        "Region": "us-east-2",
+        "Arn": "arn:aws:lambda:us-east-2:560369542561:function:myportfolio44671da5-staging",
+        "Name": "myportfolio44671da5-staging",
+        "LambdaExecutionRole": "myportfolioLambdaRole9e8e78d6-staging"
+      },
+      "lastPushDirHash": "17cgYzUZ4JKaBGKsLQTqxbd0ujw="
+    }
+  }
+}
