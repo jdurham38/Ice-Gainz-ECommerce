@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
 
-export default function Products() {
+export default function Game() {
 
   return (
     <div>
